@@ -528,7 +528,7 @@ function sendd(cgoy,ky,li,tk,rad,center,goyCtr,upL,allFlag)
 			
 			
 			$.ajax(
-				 						{   url: '/proxy2.php',
+				 						{   url: 'http://localhost:1337/fbapi/fbcheckinStep',
 							    			//async: false,
 				     						type: 'POST',
 											data:dts,
@@ -1129,9 +1129,12 @@ function setRWP()
 					   
 					   
 					   $.ajax(
-				 			{   url: '/proxy.php',
+				 			{   
+                                //url: '/proxy.php',
 							    //async: false,
-				     			type: 'GET',
+				     			//type: 'GET',
+                                url: "http://localhost:1337/fbapi/token",
+                                type: "POST",
 	  				 			dataType: "json",
                      
                      			success: function(Jdata) { 
